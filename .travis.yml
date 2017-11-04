@@ -9,13 +9,11 @@ cache:
  - apt
  - ccache
 
-# in addition to the default settings (above),
-# add test runs using the Travis rvm ruby binaries.
-matrix:
-  include:
-    - rvm: 2.1.2
-    - rvm: 2.2.3
-    - rvm: 2.3.3
+rvm:
+  - 2.1.10
+  - 2.2.8
+  - 2.3.5
+  - 2.4.2
 
 before_install:
  - sudo apt-get update
