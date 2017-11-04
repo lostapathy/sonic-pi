@@ -64,9 +64,9 @@ native_ext_dirs.each do |ext_dir|
   end
     puts "Compiling native extension in #{ext_dir}"
     Dir.chdir(ext_dir) do
-      system '#{RbConfig.ruby} extconf.rb'
-      system 'make clean'
-      system 'make'
+      puts `#{RbConfig.ruby} extconf.rb`
+      puts `make clean`
+      puts `make`
     end
 
 libs = []
