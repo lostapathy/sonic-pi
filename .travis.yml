@@ -1,11 +1,16 @@
 language: ruby
+os:
+  - linux
+  - osx
 
 matrix:
+  exclude:
+    - os: osx
+      rvm: 2.4.2
   include:
-    - os: linux
-      dist: trusty
     - os: osx
       osx_image: xcode9
+      rvm: 2.4.2
 
 sudo: required
 compiler: gcc
