@@ -11,10 +11,12 @@
 # distribution of modified versions of this work as long as this
 # notice is included.
 #++
-
+puts "debugging travis 1"
 require 'fileutils'
 
 require 'rbconfig'
+
+puts "debugging travis 2"
 ruby_api = RbConfig::CONFIG['ruby_version']
 os = case RUBY_PLATFORM
      when /.*arm.*-linux.*/
@@ -55,7 +57,7 @@ if os == :osx
     File.expand_path(File.dirname(__FILE__) + '/../vendor/narray-0.6.1.1/'),
     File.expand_path(File.dirname(__FILE__) + '/../vendor/ruby-coreaudio-0.0.12/ext/coreaudio/')]
 end
-
+puts "debugging travis 4"
 native_ext_dirs.each do |ext_dir|
   if ext_dir.is_a? Array
     ext_dir, tgt_dir = *ext_dir
