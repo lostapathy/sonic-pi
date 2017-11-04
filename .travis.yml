@@ -48,7 +48,7 @@ script:
     echo "* Compiling the vendor/ ruby gems *"
     echo "***********************************"
     cd $TRAVIS_BUILD_DIR/app/server/bin
-    ruby ./compile-extensions.rb
+    ./compile-extensions.rb
     echo ""
     echo "***********************************"
     echo "* Running the Sonic Pi test suite *"
