@@ -9,7 +9,7 @@ matrix:
       rvm: 2.4.2
   include:
     - os: osx
-      osx_image: xcode9
+      osx_image: xcode9.1
       rvm: 2.4.2
 
 sudo: required
@@ -19,8 +19,6 @@ cache:
  - ccache
 
 rvm:
-  - 2.1.10
-  - 2.2.8
   - 2.3.5
   - 2.4.2
 
